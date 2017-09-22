@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>皮卡丘</title>
+    <style>
+        *{ margin: 0; padding: 0; box-sizing: border-box;}
+        *::after{ box-sizing: border-box;}
+        *::before{ box-sizing: border-box;}
+
+        body{
+            background: #FFE600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #container{
+           width: 525px;
+           height: 295px;
+           position: relative;
+        }
+        .nose{
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 15px solid transparent;
+            border-radius: 50%;
+            border-top-color: black;
+        }
+        .eye{
+            width: 60px;
+            height: 60px;
+            border: 3px solid;
+            border-radius: 50%;
+            background-color: #2E2E2E;
+            position: absolute;
+
+        }
+        .eye::before{
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 3px solid;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 7px;
+        }
+        .left-eye{
+            top: 0;
+            left: 80px;
+        }
+
+        .right-eye {
+            top: 0;
+            right: 80px;
+        }
+        .upperLip{
+            width: 100%;
+            position: absolute;
+            top: 65px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+        .upperLip::before{
+            content: '';
+            width: 85px;
+            height: 25px;
+            display: block;
+            border: 3px solid;
+            border-top: none;
+            border-right: none;
+            border-bottom-left-radius: 40px 20px;
+            transform: rotateZ(-20deg);
+            background-color: #FFE600;
+        }
+        .upperLip::after{
+            content: '';
+            width: 85px;
+            height: 25px;
+            display: block;
+            border: 3px solid;
+            border-top: none;
+            border-left: none;
+            border-bottom-right-radius: 40px 20px;
+            transform: rotateZ(20deg);
+            background-color: #FFE600;
+        }
+        .lowerLip-wrapper{
+            position: absolute;
+            left: 0;
+            bottom: 19px;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        .lowerLip{
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 1800px;
+            border: 3px solid;
+            border-bottom-left-radius: 200px 900px;
+            border-bottom-right-radius: 200px 900px;
+            border-top-left-radius: 200px 200px;
+            border-top-right-radius: 200px 200px;
+            box-shadow: inset 0 1630px 0 20px rgb(155,0,10);
+            background-color: #FF485F;
+            z-index:0;
+        }
+        .face{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid;
+            position: absolute;
+            background-color: #FF0000;
+        }
+        .left-face{
+            top: 135px;
+            left: 0;
+        }
+        .right-face{
+            top: 135px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="nose"></div>
+        <div class="eye left-eye"></div>
+        <div class="eye right-eye"></div>
+        <div class="upperLip"></div>
+        <div class="lowerLip-wrapper">
+            <div class="lowerLip"></div>
+        </div>
+        <div class="face left-face"></div>
+        <div class="face right-face"></div>
+    </div>
+</body>
+</html>
